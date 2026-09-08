@@ -15,6 +15,7 @@ export class AppController {
     return {
       status: 'ok',
       service: 'taskflow-api',
+      version: '0.1.0',
     };
   }
 }
