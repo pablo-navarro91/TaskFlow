@@ -44,7 +44,7 @@ import * as Joi from 'joi';
         autoLoadEntities: true,
 
         // Temporal durante el desarrollo inicial.
-        synchronize: true,
+        synchronize: false, // Se establece en false para evitar la pérdida de datos en la base de datos. En un entorno de producción, se recomienda utilizar migraciones para gestionar los cambios en el esquema de la base de datos de manera controlada y segura.
       }),
     }),
 
