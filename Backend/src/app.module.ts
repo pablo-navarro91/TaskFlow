@@ -25,7 +25,10 @@ import * as Joi from 'joi';
       DB_PORT: Joi.number().port().required(),
       DB_USERNAME: Joi.string().required(),
       DB_PASSWORD: Joi.string().required(),
-    DB_DATABASE: Joi.string().required(),
+      DB_DATABASE: Joi.string().required(),
+
+      JWT_SECRET: Joi.string().required(),
+      JWT_EXPIRES_IN: Joi.string().required(),
     }),
   }),
 
