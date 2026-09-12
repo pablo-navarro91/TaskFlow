@@ -88,7 +88,7 @@ El sistema deberá permitir que un usuario registrado se autentique mediante su 
 
 ## RF-03 — Acceso a recursos protegidos
 
-**Estado:** Propuesto
+**Estado:** Verificado
 
 ### Descripción
 

@@ -211,7 +211,7 @@ El sistema realiza la búsqueda utilizando:
 
 ### Automatización relacionada
 
-`src/auth/auth.service.spec.ts`
+`src/auth/guards/jwt-auth.guard.spec.ts`
 
 ---
 
@@ -222,7 +222,7 @@ Los siguientes casos se encuentran definidos pero pendientes de implementación.
 ## CP-AUTH-009 — Acceder a recurso protegido con token válido
 
 **Requerimiento:** RF-03
-**Estado:** Pendiente
+**Estado:** Verificado
 
 ### Resultado esperado
 
@@ -236,7 +236,7 @@ Los siguientes casos se encuentran definidos pero pendientes de implementación.
 ## CP-AUTH-010 — Acceder a recurso protegido sin token
 
 **Requerimiento:** RF-03
-**Estado:** Pendiente
+**Estado:** Verificado
 
 ### Resultado esperado
 
@@ -247,7 +247,7 @@ HTTP `401 Unauthorized`.
 ## CP-AUTH-011 — Acceder con token inválido
 
 **Requerimiento:** RF-03
-**Estado:** Pendiente
+**Estado:** Verificado
 
 ### Resultado esperado
 
@@ -258,7 +258,16 @@ HTTP `401 Unauthorized`.
 ## CP-AUTH-012 — Acceder con token expirado
 
 **Requerimiento:** RF-03
-**Estado:** Pendiente
+**Tipo:** Unitario  
+**Estado:** Verificado
+
+### Observación
+
+La prueba unitaria verifica que el guard rechace la solicitud cuando
+`JwtService` informa que el token no es válido debido a su expiración.
+
+La validación con un JWT realmente expirado se incorporará posteriormente
+en las pruebas E2E.
 
 ### Resultado esperado
 

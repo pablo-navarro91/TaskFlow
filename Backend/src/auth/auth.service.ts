@@ -17,7 +17,7 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async register(registerDto: RegisterDto) {
+  async register(registerDto: RegisterDto) { // Método para registrar un nuevo usuario. Recibe un objeto RegisterDto que contiene los datos del usuario a registrar (nombre, correo electrónico y contraseña).
     const { name, email, password } = registerDto;
 
     const normalizedEmail = email.toLowerCase().trim();
@@ -45,7 +45,7 @@ export class AuthService {
     };
   }
 
-  async login(loginDto: LoginDto) {
+  async login(loginDto: LoginDto) { // Método para autenticar a un usuario existente. Recibe un objeto LoginDto que contiene el correo electrónico y la contraseña del usuario que intenta iniciar sesión.
     const normalizedEmail = loginDto.email.toLowerCase().trim();
 
     const user = await this.usersService.findByEmail(normalizedEmail);
